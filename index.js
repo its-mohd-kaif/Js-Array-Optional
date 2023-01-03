@@ -42,17 +42,18 @@ let maxValue = 0;
 let minValue = 1999999999;
 let temp = 0;
 let temp2 = 0;
-
+let quarter = "";
 for (let i = 0; i < arr.length; i++) {
   for (let j = 0; j <= arr[i].length; j++) {
     temp = arr[i][2] + arr[i][5] + arr[i][8];
     if (temp > maxValue) {
       maxValue = temp;
+      quarter = arr[i][0];
     }
   }
 }
 
-document.getElementById("max").innerHTML = maxValue;
+document.getElementById("max").innerHTML = maxValue + " " + quarter;
 // Identify the Location with minimum consumption of Milk from array
 let Kolkata = 0;
 let Delhi = 0;
